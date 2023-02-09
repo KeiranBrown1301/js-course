@@ -1,27 +1,53 @@
-let js = "amazing";
-console.log(40 + 8 + 23 - 10);
+// ////////////////////////////////////
+// // Linking a JavaScript File
+// let js = "amazing";
+// console.log(40 + 8 + 23 - 10);
 
-console.log("Keiran");
-console.log(32);
+// ////////////////////////////////////
+// // Values and Variables
+// console.log("Jonas");
+// console.log(23);
 
-let firstName = "Megumi";
+// let firstName = "Matilda";
 
-console.log(firstName);
-console.log(firstName);
-console.log(firstName);
+// console.log(firstName);
+// console.log(firstName);
+// console.log(firstName);
 
-// Variable is a box which we give a name!
+// // Variable name conventions
+// let jonas_matilda = "JM";
+// let $function = 27;
 
-// let 3years = 3
-// Variable names cannot start with a number
+// let person = "jonas";
+// let PI = 3.1415;
 
-// let keiran&meg = 'KM'
-// cannot use the ampersand
+// let myFirstJob = "Coder";
+// let myCurrentJob = "Teacher";
 
-// Various variable names are a illegal - number, function
+// let job1 = "programmer";
+// let job2 = "teacher";
 
-// Do not start with an uppercase name, as it's used for OOP
+// console.log(myFirstJob);
 
-// Variable names should be descriptive.
-// let myFirstJob = 'teacher' <- YES!
-// let job1 = 'teacher' <- NO!
+// ////////////////////////////////////
+// // Data Types
+// let javascriptIsFun = true;
+// console.log(javascriptIsFun);
+
+// // console.log(typeof true);
+// console.log(typeof javascriptIsFun);
+// // console.log(typeof 23);
+// // console.log(typeof 'Jonas');
+
+// javascriptIsFun = 'YES!';
+// console.log(typeof javascriptIsFun);
+
+// let year;
+// console.log(year);
+// console.log(typeof year);
+
+// year = 1991;
+// console.log(typeof year);
+
+// console.log(typeof null);
+// //
