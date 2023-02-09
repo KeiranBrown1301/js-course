@@ -67,6 +67,7 @@
 // console.log(lastName);
 ////////////////////////////////////
 // Basic Operators
+
 // Math operators
 // const now = 2037;
 // const ageJonas = now - 1991;
@@ -98,3 +99,22 @@
 // console.log(now - 1991 > now - 2018);
 
 ////////////////////////////////////
+
+// const weightMark = 95;
+// const heightMark = 1.88;
+
+// const weightJohn = 85;
+// const heightJohn = 1.76;
+
+const weightMark = 78;
+const heightMark = 1.69;
+
+const weightJohn = 92;
+const heightJohn = 1.95;
+
+const markBMI = weightMark / (heightMark * heightMark);
+const johnBMI = weightJohn / (heightJohn * heightJohn);
+
+const markHigherBMI = markBMI > johnBMI;
+
+console.log(markHigherBMI);
