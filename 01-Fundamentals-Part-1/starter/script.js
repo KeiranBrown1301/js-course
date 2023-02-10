@@ -99,22 +99,99 @@
 // console.log(now - 1991 > now - 2018);
 
 ////////////////////////////////////
-
+// CODING CHALLENGE
 // const weightMark = 95;
 // const heightMark = 1.88;
 
 // const weightJohn = 85;
 // const heightJohn = 1.76;
 
-const weightMark = 78;
-const heightMark = 1.69;
+// const weightMark = 78;
+// const heightMark = 1.69;
 
-const weightJohn = 92;
-const heightJohn = 1.95;
+// const weightJohn = 92;
+// const heightJohn = 1.95;
 
-const markBMI = weightMark / (heightMark * heightMark);
-const johnBMI = weightJohn / (heightJohn * heightJohn);
+// const markBMI = weightMark / (heightMark * heightMark);
+// const johnBMI = weightJohn / (heightJohn * heightJohn);
 
-const markHigherBMI = markBMI > johnBMI;
+// const markHigherBMI = markBMI > johnBMI;
 
-console.log(markHigherBMI);
+// console.log(markHigherBMI);
+// /////////////////////////////////////////
+
+// STRINGS and TEMPLATE LITERALS
+// const firstName = "Keiran";
+// const job = "teacher";
+// const birthYear = 1991;
+// const year = 2023;
+
+// const keiran =
+//   "I'm " + firstName + ", a " + (year - birthYear) + " year old " + job;
+// console.log(keiran);
+
+// const keiranNew = `I'm ${firstName} a ${year - birthYear} year old ${job}.`;
+// console.log(keiranNew);
+
+// console.log(`This is just a normal string...`);
+
+// console.log(`String with \n\
+//  many \n\
+//  lines`);
+
+// console.log(`This string doesn't
+//  need
+//  any linebreak characters`);
+
+// /////////////////////
+// Taking decisions: if and else statements
+
+// const age = 20;
+// const isOldEnough = age >= 18;
+
+// if (isOldEnough) {
+//   console.log(`Sarah can get her drivers lisence no worries`);
+// } else {
+//   const yearsLeft = 18 - age;
+//   console.log(
+//     `Sarah is too young, she has to wait another ${yearsLeft} years!`
+//   );
+// }
+
+// const birthYear = 1991;
+// let century;
+// if (birthYear <= 2000) {
+//   century = 20;
+// } else {
+//   century = 21;
+// }
+// console.log(century);
+
+// CODING CHALLENGE 2
+// const weightMark = 95;
+// const heightMark = 1.88;
+
+// const weightJohn = 85;
+// const heightJohn = 1.76;
+
+// const weightMark = 78;
+// const heightMark = 1.69;
+
+// const weightJohn = 92;
+// const heightJohn = 1.95;
+
+// const markBMI = weightMark / (heightMark * heightMark);
+// const johnBMI = weightJohn / (heightJohn * heightJohn);
+
+// if (markBMI > johnBMI) {
+//   console.log(`Mark's BMI (${markBMI}) is higher than John's BMI (${johnBMI})`);
+// } else {
+//   console.log(`John's BMI (${johnBMI}) is higer than Mark's BMI (${markBMI})`);
+// }
+
+// TYPE CONVERSION
+const inputYear = "1991";
+console.log(Number(inputYear));
+console.log(inputYear + 18);
+
+// TYPE COESCION
