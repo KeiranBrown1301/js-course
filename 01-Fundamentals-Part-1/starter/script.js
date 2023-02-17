@@ -310,27 +310,110 @@ console.log(!hasDriversLicense); // NOT
 // const koalasAverageScore = (109 + 95 + 123) / 3;
 
 //  Bonus 2
-const dolphinsAverageScore = (97 + 112 + 101) / 3;
-const koalasAverageScore = (109 + 95 + 106) / 3;
+// const dolphinsAverageScore = (97 + 112 + 101) / 3;
+// const koalasAverageScore = (109 + 95 + 106) / 3;
 
-console.log(dolphinsAverageScore);
-console.log(koalasAverageScore);
+// console.log(dolphinsAverageScore);
+// console.log(koalasAverageScore);
 
-const minimumScore = 100;
+// const minimumScore = 100;
 
-if (
-  dolphinsAverageScore > koalasAverageScore &&
-  dolphinsAverageScore >= minimumScore
-) {
-  console.log(`The Dolphins are the winners!`);
-} else if (
-  koalasAverageScore > dolphinsAverageScore &&
-  koalasAverageScore >= minimumScore
-) {
-  console.log(`The Koalas are the winners!`);
-} else if (
-  (koalasAverageScore < minimumScore && dolphinsAverageScore < minimumScore) ||
-  koalasAverageScore === dolphinsAverageScore
-) {
-  console.log(`It's a draw`);
-}
+// if (
+//   dolphinsAverageScore > koalasAverageScore &&
+//   dolphinsAverageScore >= minimumScore
+// ) {
+//   console.log(`The Dolphins are the winners!`);
+// } else if (
+//   koalasAverageScore > dolphinsAverageScore &&
+//   koalasAverageScore >= minimumScore
+// ) {
+//   console.log(`The Koalas are the winners!`);
+// } else if (
+//   (koalasAverageScore < minimumScore && dolphinsAverageScore < minimumScore) ||
+//   koalasAverageScore === dolphinsAverageScore
+// ) {
+//   console.log(`It's a draw`);
+// }
+
+// SWITCH STATEMENTS
+// const day = "Sunday";
+
+// switch (day) {
+//   case "monday": // Day === monday
+//     console.log("Plan my week out.");
+//     console.log("Go to the gym.");
+//     break;
+//   case "tuesday":
+//     console.log("Eat some ramen");
+//     break;
+//   case "wednesday":
+//   case "thursday":
+//     console.log("Code a lot!");
+//     break;
+//   case "friday":
+//     console.log("Play wow all day");
+//     break;
+//   case "saturday":
+//   case "sunday":
+//     console.log("enjoy the weekend");
+//     break;
+//   default:
+//     console.log("This isnt a valid day...");
+// }
+
+// if (day === "Monday") {
+//   console.log("Plan my week out");
+//   console.log("Go to the gym");
+// } else if (day === "Tuesday") {
+//   console.log("Eat some ramen");
+// } else if (day === "Wednesday" || day === "Thursday") {
+//   console.log("Go to work and code a lot");
+// } else if (day === "Friday") {
+//   console.log("Time for a beer");
+// } else if (day === "Saturday" || day === "Sunday") {
+//   console.log("Time to play WoW all weekend");
+// } else {
+//   console.log(`That isn't a valid day... Sorry`);
+// }
+
+// Statements vs Expressions
+// 3 + 4
+// 1991
+// true && false && !false
+
+// if (23 > 10) {
+//   console.log('This number is big')
+// }
+
+// An expression gives a value
+// A statement is a complete sentence
+
+// Conditional operator
+// const age = 32;
+// age >= 18
+//   ? console.log("Damn, have a beer")
+//   : console.log("Better wait a few years");
+
+// const drink = age > 18 ? "wine" : "water";
+// console.log(drink);
+
+// let drink2;
+// if (age >= 18) {
+//   drink2 = "wine";
+// } else {
+//   drink2 = "water";
+// }
+// console.log(drink2);
+
+// console.log(`I like to drink ${age > 18 ? "wine" : "water"}`);
+
+// Coding challenge 4
+// const bill = 275;
+// const bill = 40;
+// const bill = 430;
+
+// const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// const total = tip + bill;
+// console.log(
+//   `The bill was $${bill}, the tip was $${tip} so your total comes to $${total}`
+// );
