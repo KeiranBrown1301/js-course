@@ -105,20 +105,23 @@
 const calcAverage = (a, b, c) => (a + b + c) / 3;
 
 // Test 1
-const dolphinsAverageScore = calcAverage(44, 23, 71);
-const koalasAverageScore = calcAverage(65, 54, 49);
+// const dolphinsAverageScore = calcAverage(44, 23, 71);
+// const koalasAverageScore = calcAverage(65, 54, 49);
 // Test 2
-// const dolphinsAverageScore = calcAverage(85, 54, 41);
-// const koalasAverageScore = calcAverage(23, 34, 27);
+const dolphinsAverageScore = calcAverage(85, 54, 41);
+const koalasAverageScore = calcAverage(23, 34, 27);
 
 console.log(dolphinsAverageScore, koalasAverageScore);
 
-const checkWinner = function(avgDolphins, avgKoalas) {
-  if () {
-
-  } else if() {
-
+const checkWinner = function (avgDolphins, avgKoalas) {
+  if (avgDolphins > 2 * avgKoalas) {
+    return `Dolphins win (${avgDolphins} vs. ${avgKoalas})`;
+  } else if (avgKoalas > 2 * avgDolphins) {
+    return `Koalas win (${avgKoalas} vs. ${avgDolphins})`;
   } else {
-    return `No one is the winner`
+    return `No one is the winner`;
   }
 };
+
+const whoWon = checkWinner(dolphinsAverageScore, koalasAverageScore);
+console.log(whoWon);
