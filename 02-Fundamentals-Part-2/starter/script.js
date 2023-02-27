@@ -211,19 +211,96 @@
 // const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 // console.log(totals);
 
-// INTRO TO OBJECTS
-const keiranArray = [
-  "Keiran",
-  "Brown",
-  2023 - 1991,
-  "teacher",
-  ["Iz", "Luke", "James"],
-];
+// INTRO TO OBJECTS & DOT VS BRACKET NOTATION
+// const keiranArray = [
+//   "Keiran",
+//   "Brown",
+//   2023 - 1991,
+//   "teacher",
+//   ["Iz", "Luke", "James"],
+// ];
+
+// Object literal syntax
+// const keiranObject = {
+//   firstName: "Keiran",
+//   lastName: "Brown",
+//   age: 2023 - 1991,
+//   job: "teacher",
+//   friends: ["John", "Luke", "Iz"],
+// };
+// console.log(keiranObject);
+// Dot notation - Most other cases
+// console.log(keiranObject.firstName);
+// Bracket notation - When we need to compute
+// console.log(keiranObject["firstName"]);
+
+// const nameKey = "Name";
+// console.log(keiranObject["first" + nameKey]);
+// console.log(keiranObject["last" + nameKey]);
+
+// const interestedIn = prompt(
+//   "What do you want to know about Keiran? CHoose between firstName, lastName, age, job, friends?"
+// );
+// console.log(keiranObject[interestedIn]);
+// This expression between the brackets, will be evaluated. InterestedIn becomes the object key, and then prints the value.
+
+// if (keiranObject[interestedIn]) {
+//   console.log(keiranObject[interestedIn]);
+// } else {
+//   console.log("Wrong request...");
+// }
+
+// keiranObject.location = "Tokyo";
+// keiranObject["twitter"] = "@...";
+// console.log(keiranObject);
+
+// Challenge
+// "Keiran has 3 friends, and his best friend is called John"
+// console.log(
+//   `${keiranObject.firstName} has ${keiranObject.friends.length} friends, and his best friend is called ${keiranObject.friends[0]}.`
+// );
 
 const keiranObject = {
   firstName: "Keiran",
   lastName: "Brown",
-  age: 2023 - 1991,
+  birthYear: 1991,
   job: "teacher",
-  friends: ["Jack", "Luke", "Iz"],
+  friends: ["John", "Luke", "Iz"],
+  hasDriversLicense: true,
+
+  // calcAge: function (birthYear) {
+  //   return 2023 - birthYear;
+  // },
+  // calcAge: function () {
+  //   console.log(this);
+  //   return 2023 - this.birthYear;
+  // },
+  calcAge: function () {
+    this.age = 2023 - this.birthYear;
+    return this.age;
+  },
+
+  canDrive: function () {
+    return this.hasDriversLicense === true ? "has a" : "does not have a";
+  },
+
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calcAge()}-year old ${
+      this.job
+    } and he ${this.canDrive(this.hasDriversLicense)} drivers license.`;
+  },
 };
+console.log(keiranObject.getSummary());
+
+// console.log(
+//   `${keiranObject.firstName} is a ${keiranObject.age}-year old ${
+//     keiranObject.job
+//   } and he ${keiranObject.canDrive(
+//     keiranObject.hasDriversLicense
+//   )} drivers license`
+// );
+
+// console.log(keiranObject.calcAge(this.birthYear));
+// console.log(keiranObject["calcAge"](1991));
+
+// CODING CHALLENGE
