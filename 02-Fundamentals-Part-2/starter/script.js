@@ -304,3 +304,41 @@ console.log(keiranObject.getSummary());
 // console.log(keiranObject["calcAge"](1991));
 
 // CODING CHALLENGE
+const markObject = {
+  fullName: "Mark Miller",
+  mass: 78,
+  height: 1.69,
+
+  calcBMI: function () {
+    this.bmi = this.mass / (this.height * 2);
+    return this.bmi;
+  },
+};
+// console.log(markObject.calcBMI());
+// console.log(markObject.bmi);
+
+const johnObject = {
+  fullName: "John Smith",
+  mass: 92,
+  height: 1.95,
+
+  calcBMI: function () {
+    this.bmi = this.mass / (this.height * 2);
+    return this.bmi;
+  },
+};
+// console.log(johnObject.calcBMI());
+// console.log(johnObject.bmi);
+
+markObject.calcBMI();
+johnObject.calcBMI();
+
+if (markObject.bmi > johnObject.bmi) {
+  console.log(
+    `${markObject.fullName}'s BMI (${markObject.bmi}) is higher than ${johnObject.fullName}'s BMI (${johnObject.bmi})`
+  );
+} else if (johnObject.bmi > markObject.bmi) {
+  console.log(
+    `${johnObject.fullName}'s BMI (${johnObject.bmi}) is higher than ${markObject.fullName}'s BMI (${markObject.bmi})`
+  );
+}
