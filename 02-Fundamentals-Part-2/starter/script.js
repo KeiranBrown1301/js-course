@@ -260,37 +260,37 @@
 //   `${keiranObject.firstName} has ${keiranObject.friends.length} friends, and his best friend is called ${keiranObject.friends[0]}.`
 // );
 
-const keiranObject = {
-  firstName: "Keiran",
-  lastName: "Brown",
-  birthYear: 1991,
-  job: "teacher",
-  friends: ["John", "Luke", "Iz"],
-  hasDriversLicense: true,
+// const keiranObject = {
+//   firstName: "Keiran",
+//   lastName: "Brown",
+//   birthYear: 1991,
+//   job: "teacher",
+//   friends: ["John", "Luke", "Iz"],
+//   hasDriversLicense: true,
 
-  // calcAge: function (birthYear) {
-  //   return 2023 - birthYear;
-  // },
-  // calcAge: function () {
-  //   console.log(this);
-  //   return 2023 - this.birthYear;
-  // },
-  calcAge: function () {
-    this.age = 2023 - this.birthYear;
-    return this.age;
-  },
+//   // calcAge: function (birthYear) {
+//   //   return 2023 - birthYear;
+//   // },
+//   // calcAge: function () {
+//   //   console.log(this);
+//   //   return 2023 - this.birthYear;
+//   // },
+//   calcAge: function () {
+//     this.age = 2023 - this.birthYear;
+//     return this.age;
+//   },
 
-  canDrive: function () {
-    return this.hasDriversLicense === true ? "has a" : "does not have a";
-  },
+//   canDrive: function () {
+//     return this.hasDriversLicense === true ? "has a" : "does not have a";
+//   },
 
-  getSummary: function () {
-    return `${this.firstName} is a ${this.calcAge()}-year old ${
-      this.job
-    } and he ${this.canDrive(this.hasDriversLicense)} drivers license.`;
-  },
-};
-console.log(keiranObject.getSummary());
+//   getSummary: function () {
+//     return `${this.firstName} is a ${this.calcAge()}-year old ${
+//       this.job
+//     } and he ${this.canDrive(this.hasDriversLicense)} drivers license.`;
+//   },
+// };
+// console.log(keiranObject.getSummary());
 
 // console.log(
 //   `${keiranObject.firstName} is a ${keiranObject.age}-year old ${
@@ -304,41 +304,68 @@ console.log(keiranObject.getSummary());
 // console.log(keiranObject["calcAge"](1991));
 
 // CODING CHALLENGE
-const markObject = {
-  fullName: "Mark Miller",
-  mass: 78,
-  height: 1.69,
+// const markObject = {
+//   fullName: "Mark Miller",
+//   mass: 78,
+//   height: 1.69,
 
-  calcBMI: function () {
-    this.bmi = this.mass / (this.height * 2);
-    return this.bmi;
-  },
-};
-// console.log(markObject.calcBMI());
-// console.log(markObject.bmi);
+//   calcBMI: function () {
+//     this.bmi = this.mass / (this.height * 2);
+//     return this.bmi;
+//   },
+// };
+// // console.log(markObject.calcBMI());
+// // console.log(markObject.bmi);
 
-const johnObject = {
-  fullName: "John Smith",
-  mass: 92,
-  height: 1.95,
+// const johnObject = {
+//   fullName: "John Smith",
+//   mass: 92,
+//   height: 1.95,
 
-  calcBMI: function () {
-    this.bmi = this.mass / (this.height * 2);
-    return this.bmi;
-  },
-};
-// console.log(johnObject.calcBMI());
-// console.log(johnObject.bmi);
+//   calcBMI: function () {
+//     this.bmi = this.mass / (this.height * 2);
+//     return this.bmi;
+//   },
+// };
+// // console.log(johnObject.calcBMI());
+// // console.log(johnObject.bmi);
 
-markObject.calcBMI();
-johnObject.calcBMI();
+// markObject.calcBMI();
+// johnObject.calcBMI();
 
-if (markObject.bmi > johnObject.bmi) {
-  console.log(
-    `${markObject.fullName}'s BMI (${markObject.bmi}) is higher than ${johnObject.fullName}'s BMI (${johnObject.bmi})`
-  );
-} else if (johnObject.bmi > markObject.bmi) {
-  console.log(
-    `${johnObject.fullName}'s BMI (${johnObject.bmi}) is higher than ${markObject.fullName}'s BMI (${markObject.bmi})`
-  );
+// if (markObject.bmi > johnObject.bmi) {
+//   console.log(
+//     `${markObject.fullName}'s BMI (${markObject.bmi}) is higher than ${johnObject.fullName}'s BMI (${johnObject.bmi})`
+//   );
+// } else if (johnObject.bmi > markObject.bmi) {
+//   console.log(
+//     `${johnObject.fullName}'s BMI (${johnObject.bmi}) is higher than ${markObject.fullName}'s BMI (${markObject.bmi})`
+//   );
+// }
+
+// THE FOR LOOP
+// console.log('Lifting weights rep 1')
+// console.log('Lifting weights rep 2')
+// console.log('Lifting weights rep 3')
+// console.log('Lifting weights rep 4')
+// console.log('Lifting weights rep 5')
+
+// For loop keeps running while condition is TRUE
+// for (let rep = 1; rep <= 10; rep++) {
+//   console.log(`Lifting weights rep number ${rep}`);
+// }
+
+const keiran = [
+  "Keiran",
+  "Brown",
+  2023 - 1991,
+  "teacher",
+  ["Megumi", "John", "Mary"],
+  true,
+];
+
+const types = [];
+
+for (let i = 0; i < keiran.length; i++) {
+  console.log(keiran[i], typeof keiran[i]);
 }
