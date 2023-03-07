@@ -355,17 +355,113 @@
 //   console.log(`Lifting weights rep number ${rep}`);
 // }
 
-const keiran = [
-  "Keiran",
-  "Brown",
-  2023 - 1991,
-  "teacher",
-  ["Megumi", "John", "Mary"],
-  true,
-];
+// const keiran = [
+//   "Keiran",
+//   "Brown",
+//   2023 - 1991,
+//   "teacher",
+//   ["Megumi", "John", "Mary"],
+//   true,
+//   120,
+// ];
 
-const types = [];
+// const types = [];
 
-for (let i = 0; i < keiran.length; i++) {
-  console.log(keiran[i], typeof keiran[i]);
+// for (let i = 0; i < keiran.length; i++) {
+//   // reading from the keiran array
+//   console.log(keiran[i], typeof keiran[i]);
+
+//   // Filling types array
+//   // types[i] = typeof keiran[i];
+//   types.push(typeof keiran[i]);
+// }
+
+// console.log(types);
+
+// const years = [1991, 2007, 1968, 2020];
+// const ages = [];
+
+// for (let i = 0; i < years.length; i++) {
+//   ages.push(2023 - years[i]);
+// }
+
+// console.log(ages);
+
+// // Continue and break statements
+// console.log("----------Only strings-----------");
+// for (let i = 0; i < keiran.length; i++) {
+//   if (typeof keiran[i] !== "string") continue;
+//   console.log(keiran[i], typeof keiran[i]);
+// }
+
+// console.log("----------Break with number-----------");
+// // After a number is found, the loop breaks.
+// for (let i = 0; i < keiran.length; i++) {
+//   if (typeof keiran[i] === "number") break;
+//   console.log(keiran[i], typeof keiran[i]);
+// }
+
+// Looping backwards and loops in loops
+// const keiran = [
+//   "Keiran",
+//   "Brown",
+//   2023 - 1991,
+//   "teacher",
+//   ["Megumi", "John", "Mary"],
+//   true,
+// ];
+
+// 0, 1, ...4
+// 4, 3, ...0
+
+// for (let i = keiran.length - 1; i >= 0; i--) {
+//   console.log(i, keiran[i]);
+// }
+
+// for (let exercise = 1; exercise < 4; exercise++) {
+//   console.log(`------Starting exercise ${exercise}`);
+//   for (let rep = 1; rep < 6; rep++) {
+//     console.log(`Exercise ${exercise}: Lifting weights rep ${rep}`);
+//   }
+// }
+
+// While loop
+// for (let rep = 1; rep <= 10; rep++) {
+//   console.log(`Lifting weights rep number ${rep}`);
+// }
+
+// let rep = 1;
+// while (rep <= 10) {
+//   console.log(`WHILE: Lifting weights rep number ${rep}`);
+//   rep++;
+// }
+
+// if we DO NOT need a counter it can be good to use the WHILE
+// let dice = Math.trunc(Math.random() * 6) + 1;
+// while (dice !== 6) {
+//   console.log(`You rolled a ${dice}`);
+//   dice = Math.trunc(Math.random() * 6) + 1;
+//   if (dice === 6) {
+//     console.log(`You did it!`);
+//   }
+// }
+
+// for (let i = 0; i < years.length; i++) {
+//   ages.push(2023 - years[i]);
+// }
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+const calcTip = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+};
+
+for (let i = 0; i < bills.length; i++) {
+  tips.push(calcTip(bills[i]));
+  totals.push(bills[i] + tips[i]);
 }
+
+console.log(tips);
+console.log(totals);
