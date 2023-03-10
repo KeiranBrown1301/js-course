@@ -62,24 +62,24 @@ console.log(amplitude);
 // Sub problems
 // Merge two arrays?
 
-const calcTempAmplitudeNew = function (t1, t2) {
-  const temps = t1.concat(t2);
-  console.log(temps);
+// const calcTempAmplitudeNew = function (t1, t2) {
+//   const temps = t1.concat(t2);
+//   console.log(temps);
 
-  let max = temps[0];
-  let min = temps[0];
-  for (let i = 0; i < temps.length; ++i) {
-    const curTemp = temps[i];
-    if (typeof curTemp !== 'number') continue;
+//   let max = temps[0];
+//   let min = temps[0];
+//   for (let i = 0; i < temps.length; ++i) {
+//     const curTemp = temps[i];
+//     if (typeof curTemp !== 'number') continue;
 
-    if (curTemp > max) max = curTemp;
-    if (curTemp < min) min = curTemp;
-  }
-  console.log(max, min);
-  return max - min;
-};
-const amplitudeNew = calcTempAmplitudeNew([3, 9, 1], [9, 0, 5]);
-console.log(amplitudeNew);
+//     if (curTemp > max) max = curTemp;
+//     if (curTemp < min) min = curTemp;
+//   }
+//   console.log(max, min);
+//   return max - min;
+// };
+// const amplitudeNew = calcTempAmplitudeNew([3, 9, 1], [9, 0, 5]);
+// console.log(amplitudeNew);
 
 // BUGS in programming.
 // Bugs are completely normal!
@@ -96,3 +96,48 @@ console.log(amplitudeNew);
 // PREVENT - Prevent it from happening again.
 // Searching for the same bug in similar code.
 // Writing tests using testing software.
+
+const measureKelvin = function () {
+  const measurement = {
+    type: 'temp',
+    unit: 'celsius',
+    // C) - FIX
+    // value: Number(prompt('Degrees celsius: ')),
+    value: 10,
+  };
+
+  // B) FIND
+  console.table(measurement);
+
+  // console.log(measurement.value);
+  // console.warn();
+  // console.error();
+
+  const kelvin = measurement.value + 273;
+  return kelvin;
+};
+// A) IDENTIFY
+console.log(measureKelvin());
+
+// USING A DEBUGGER
+const calcTempAmplitudeBug = function (t1, t2) {
+  const temps = t1.concat(t2);
+  console.log(temps);
+
+  let max = 0;
+  let min = 0;
+  for (let i = 0; i < temps.length; ++i) {
+    const curTemp = temps[i];
+    if (typeof curTemp !== 'number') continue;
+
+    if (curTemp > max) max = curTemp;
+    if (curTemp < min) min = curTemp;
+  }
+  console.log(max, min);
+  return max - min;
+};
+const amplitudeBug = calcTempAmplitudeBug([3, 9, 1], [9, 4, 5]);
+// A) IDENTIFY
+console.log(amplitudeBug);
+
+// CODING CHALLENGE
