@@ -141,3 +141,36 @@ const amplitudeBug = calcTempAmplitudeBug([3, 9, 1], [9, 4, 5]);
 console.log(amplitudeBug);
 
 // CODING CHALLENGE
+// 4 steps.
+// 1 - Make sure you 100% understand the problem. Ask the right questions to get a clear picture of the problem.
+// 2 - Divide and conquer: Break a big problem into smaller sub problems.
+// 3 - Dont be afraid to do as much research as we have to. (Google, Stack overflow, MDN.)
+// 4 - For bigger problems, write pusedo code before writing the actual code.
+//
+
+// Understand the problem
+// - Array transformed to string, and seperated by ....
+// - What is the X days? A: Index + 1
+
+// Step 2 - Break it up!
+// - Transform array into a string.
+// - Transform each element into string with C
+// - String needs to contain day (index + 1)
+// - Add ... between elements at start and end of string
+const data1 = [17, 21, 23];
+const data2 = [12, 5, -5, 0, 4];
+
+console.log(`... ${data1[0]}C ... ${data1[1]}C ... ${data1[2]}C...`);
+
+const printForecast = function (arr) {
+  let str = '';
+  // We use the empty string here to turn the number value in a string.
+  for (let i = 0; i < arr.length; i++) {
+    str = str + `${arr[i]}C in ${i + 1} days ... `;
+  }
+  // The day counter is just index + 1.
+  // Here, the strong keeps growing as we loop through.
+  console.log('... ' + str);
+};
+printForecast(data1);
+//
