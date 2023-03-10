@@ -80,3 +80,19 @@ const calcTempAmplitudeNew = function (t1, t2) {
 };
 const amplitudeNew = calcTempAmplitudeNew([3, 9, 1], [9, 0, 5]);
 console.log(amplitudeNew);
+
+// BUGS in programming.
+// Bugs are completely normal!
+// IDENTIFY - Becoming aware that there is a bug
+// During development
+// Testing software
+// Using reports during production
+// Context: Browsers, users, etc...
+// FIND - Isolating exactly where the bug is in the code.
+// Developer console (simple bugs)
+// Debugger (Complex code)
+// FIX - Correct the bug
+// Replace the wrong solution with the correct one.
+// PREVENT - Prevent it from happening again.
+// Searching for the same bug in similar code.
+// Writing tests using testing software.
