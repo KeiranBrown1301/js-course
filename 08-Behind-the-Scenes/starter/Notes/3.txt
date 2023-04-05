@@ -1,0 +1,34 @@
+Executions contexts and the call stack
+
+What is an execution context?
+  - Environment in which a piece of JS is exeited. Stores all the vital information for some code to be executed.
+
+  - Exactly ONE global execution context(EC) - Default context created for code that is not inside any function (top leve)
+
+  - One execution context per function - For each function call, a new EC is created.
+
+  - Compilation
+    v
+    (EXECUTION)
+    Creation of global execution context (for top level code) (Not inside a function)
+      v
+    Execution of top level code (inside global EX)
+      v
+    Execution of functions and waiting for callbacks. (example: click event callback)
+
+   - In detail
+    - Whats inside?
+      - Variable Environment
+        - lets const and var declarations
+        - functions
+        - Arguments objects (Not in arrow functions.)
+      - Scope Chain
+      - 'this' keyword (Not in arrow functions.)
+
+  - The call stack.
+    - The "Place" where execution contexts get stacked on top of each other, to keep track of where we are in execution. It all keeps stuff in ORDER!
+
+    - Execution context
+    - Execution context
+    - Execution context
+    - ...
