@@ -1,0 +1,35 @@
+What is JS?
+High level
+  - Every program needs recources! The dev doesn NOT have to worry, everything happens automatically.
+
+Garbage Collection
+  - Cleaning memory so we don;t have to!
+
+Just in time Language
+  - Abstraction over machine code. Convert machine code to english.
+
+Multi Paradign
+  - An approach or mindset to structuring code, which will direct coding style and technique
+  - Procedural
+  - OOP
+  - Functional Programming
+  - Imperative vs Declarative
+
+Prototype based, Object oriented.
+  - Arrays for example, inherit methods from prototypes.
+
+First class functions
+  - Functions are treated as variables. We can pass them to other functions and return them from functions.
+  - Example, passing a function into another function.
+
+Dynamic Language
+  - No data type definitions. Types becomes knows at runtime.
+  - Data type of variables is automatically changed.
+
+Single Threaded
+  - Concurrency model: How the JS engine handles multiple tasks.
+  - JS runs one single thread, so just ONE THING AT A TIME.
+  -
+
+Non-blocking event loop
+  - This is obtained by using an event loop. Takes long running tasks and runs them in the background.
