@@ -1,0 +1,29 @@
+What is a JS engine?
+Its a program that executes JS code.
+  - For example - The V8 Engine that works with google.
+
+JS Engine?
+  - Callstack - Execution content and where code is executed.
+  - Heap - Object in memory and where objects are stored.
+
+CS Sidenote - COmpilation vs Interpretation
+  - COmpilation - Entire code is converted at once, and written into a binary file that canbe executed by a PC.
+
+  - Interpretation - Interrpreter runs through the source code and executes it line by line.
+
+  - Modern JS uses Just in time (JiT). The entire code is converted into machine code at once and executed right away.
+
+JIT COmpilation
+  - Parsing -> Compilation -> Execution
+  - All the while OPTIMIZATION is taking place
+
+JS runtime
+  - Runtime in the browser
+    - Contained including all the things that we need to use JS. (In the browser, in this case.)
+    - Engine + APIs (DOM, timers, fetch API, etc...)
+    - Callback queue - onClick, timer, data, ... (Event loop)
+
+  - Runtime in Node.js
+    - engine
+    - C++ bindings and thread pool
+    - Callback queue
