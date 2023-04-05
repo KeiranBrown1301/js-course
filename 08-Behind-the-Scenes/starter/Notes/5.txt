@@ -1,0 +1,16 @@
+Hoisting
+
+Hoisting in js
+  - makes some types of variables accessable/usable in the code before they are actually declared. "Variables lifted to the top of their scope".
+  - Behind the scenes - Code is scanned before execution for var declarations, a new property is created in the variable environment object.
+
+Temporal Dead Zone, Let and const
+  - The region of the scope where the varible is defined but can;t be used in any way.
+  - Differnt types of error messages.
+Why TDZ?
+  - Makes it easier to avoid and catch errors: Accessing variables bfore declaration is bad practice! It should be avoided.
+  - Makes const variables actually work, since they can never be redefined
+
+Why Hoisting?
+  - Using functions before actualy declatrations.
+  - Var hoisting is just a byproduct.
