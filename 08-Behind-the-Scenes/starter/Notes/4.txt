@@ -1,0 +1,38 @@
+Scope and the scope Chain
+
+  - Concepts
+    - Scoping controls how the variables are organized and accessed.
+    - Lexical scoping is scoping controlled by placement of functions and blocks in the code.
+    - Scope - The space or environment where a variable is declared.
+    - Global scope, function scope and block scope.
+    - Scope of a variable - The region of our ode whre a certain variable can be accessed.
+
+  - 3 types of scope
+      - Global Scope
+        - Outside of any function or block
+        - Accessable anywhere
+      - Function scope
+        - Inside a function, only accessable inside.
+        - LOCAL scope.
+      - Block Scope
+        - Varibale are accessable only INSIDE BLOCK (block scoped) example - If block, for loop...
+        - HOWEVER this only applies to variables with let and const
+        - Functions are also block scoped (only in strict mode)
+
+  - Scopes can LOOK UP, but never LOOK DOWN (or sideways?)
+  - LET AND CONST are BLOCK SCOPED.
+  - VAR is function scoped
+
+  - Scope chain vs Call stack
+    - Order which functions are written in the code have nothing to do with order which functions are called.
+
+  - Summary
+    - Scoping asks the question "Where do variables live?" or "Where can we access variables or where can we not?"
+    - # types of scope in JS.
+    - Only LET and CONST variables are block scoped. VAR ends up in the closest function scope.
+    - lexical scoping, where we can access variables are based exactly where in the code and blocks they are written.
+    - Every scope has access to all the variables from its outer scoped. THis is the SCOPE CHAIN.
+    - When a variable is NOT in the current scope, the engine LOOKS UP in the chain until it finds the variable it's looking for.
+    - The scope chain is a ONE WAY STREET. It will never ever have access to the variables of an inner scope.
+    - The scope chain is equal to adding toget all the variable environtments of all the parent scopes.
+    - The scope chain has nothing to do with the ORDER which functions are called.
