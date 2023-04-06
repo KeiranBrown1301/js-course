@@ -1,0 +1,13 @@
+The THIS keyword
+
+This keyword/variable is a special variable that is created for every execution context(every function). It takes the values of (points to) the 'owner' of the function in which the this keyword is used.
+
+this is NOT static, it depends on how the dunction is called, and it's value is only assigned when function is actually called.
+
+Functions
+  - Method (this) = <Object that is calling the method>
+  - Simple function call (this) = undefined
+  - Arrow functions (this) = <this of surrounding function. (lexical this)>
+  - Event listener (this) = <DOM element that the handler is attached to>
+  (Also with new, call, apply, bind...)
+This does NOT point to the function itself, and also NOT the its variable environment
