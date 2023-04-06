@@ -1,6 +1,6 @@
 'use strict';
 
-function calcAge(birthYear) {
+function calcAge2(birthYear) {
   const age = 2037 - birthYear;
 
   function printAge() {
@@ -33,7 +33,7 @@ function calcAge(birthYear) {
 }
 
 const firstName = 'Keiran';
-calcAge(1991);
+calcAge2(1991);
 // console.log(age);
 // printAge()
 
@@ -80,3 +80,36 @@ const z = 3;
 console.log(x === window.x);
 console.log(y === window.y);
 console.log(z === window.z);
+
+// console.log(this);
+
+const calcAge = function (birthYear) {
+  console.log(2037 - birthYear);
+  // console.log(this);
+};
+calcAge(1991);
+
+const calcAgeArrow = birthYear => {
+  console.log(2037 - birthYear);
+  // console.log(this);
+};
+calcAgeArrow(1991);
+
+const keiran = {
+  year: 1991,
+  calcAge: function () {
+    console.log(this);
+    console.log(2037 - this.year);
+  },
+};
+keiran.calcAge();
+
+const megumi = {
+  year: 1995,
+};
+
+megumi.calcAge = keiran.calcAge;
+megumi.calcAge();
+
+const f = keiran.calcAge;
+f();
