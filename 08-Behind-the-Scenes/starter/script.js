@@ -39,23 +39,23 @@
 
 //  Hoisting and TDZ practice
 // Variables
-console.log(me);
+// console.log(me);
 // console.log(job);
 // console.log(year);
 
-var me = 'Keiran';
-let job = 'Teacher';
-const year = 1991;
+// var me = 'Keiran';
+// let job = 'Teacher';
+// const year = 1991;
 
 // Functions
-console.log(addDecl(2, 3));
+// console.log(addDecl(2, 3));
 // console.log(addExpr(2, 3));
-console.log(addArrow);
+// console.log(addArrow);
 // console.log(addArrow(2, 3));
 
-function addDecl(a, b) {
-  return a + b;
-}
+// function addDecl(a, b) {
+//   return a + b;
+// }
 
 // const addExpr = function (a, b) {
 //   return a + b;
@@ -156,8 +156,24 @@ const addExpr = function (a, b) {
 addExpr(2, 5);
 addExpr(2, 5, 8, 16);
 
-var addArrow = (a, b) => {
-  console.log(arguments);
-  return a + b;
+// var addArrow = (a, b) => {
+//   console.log(arguments);
+//   return a + b;
+// };
+// addArrow(2, 5, 8);
+
+let age = 30;
+let oldAge = age;
+age = 31;
+console.log(age);
+console.log(oldAge);
+
+const me = {
+  name: 'Keiran',
+  age: 30,
 };
-addArrow(2, 5, 8);
+
+const friend = me;
+friend.age = 27;
+console.log('Friend', friend);
+console.log('Me', me);

@@ -1,0 +1,6 @@
+Primitives vs Objects (Primitive vs Reference Types)
+
+Review - Primitives Objects and the JS engine
+Primitives (Stored in call stack)(Primitive Types) = number, string, boolean, undefined, null, symbol, bigint
+
+Objects (Stored in HEAP) (Reference Types) = object literal, arrays, functions, and more...
