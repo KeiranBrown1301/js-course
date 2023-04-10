@@ -4,3 +4,8 @@ Review - Primitives Objects and the JS engine
 Primitives (Stored in call stack)(Primitive Types) = number, string, boolean, undefined, null, symbol, bigint
 
 Objects (Stored in HEAP) (Reference Types) = object literal, arrays, functions, and more...
+
+HOW JS WORKS BEHIND THE Scenes
+  - Prototypal inheritance
+  - Event Loop
+  - How DOM really works
