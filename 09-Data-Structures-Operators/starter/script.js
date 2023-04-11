@@ -12,21 +12,6 @@ const restaurant = {
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
-  order: function (starterIndex, mainIndex) {
-    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
-  },
-
-  orderDelivery: function ({
-    starterIndex = 1,
-    mainIndex = 0,
-    time = '20:00',
-    address,
-  }) {
-    console.log(
-      `Order Received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
-    );
-  },
-
   openingHours: {
     thu: {
       open: 12,
@@ -40,48 +25,65 @@ const restaurant = {
       open: 0, // Open 24 hours
       close: 24,
     },
+
+    order: function (starterIndex, mainIndex) {
+      return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+    },
+
+    orderDelivery: function ({
+      starterIndex = 1,
+      mainIndex = 0,
+      time = '20:00',
+      address,
+    }) {
+      console.log(
+        `Order Received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
+      );
+    },
   },
 };
 
-restaurant.orderDelivery({
-  time: '22.30',
-  address: '3 Grange Road Caulfield East',
-  mainIndex: 2,
-  starterIndex: 2,
-});
+// DESTRUCTURING OBJECTS
+// restaurant.orderDelivery({
+//   time: '22.30',
+//   address: '3 Grange Road Caulfield East',
+//   mainIndex: 2,
+//   starterIndex: 2,
+// });
 
-restaurant.orderDelivery({
-  address: '3 Grange Road Caulfield East',
-  starterIndex: 1,
-});
+// restaurant.orderDelivery({
+//   address: '3 Grange Road Caulfield East',
+//   starterIndex: 1,
+// });
 
-const { name, openingHours, categories } = restaurant;
-// console.log(name, openingHours, categories);
+// const { name, openingHours, categories } = restaurant;
+// // console.log(name, openingHours, categories);
 
-const {
-  name: restaurantName,
-  openingHours: hours,
-  categories: tags,
-} = restaurant;
-console.log(restaurantName, hours, tags);
+// const {
+//   name: restaurantName,
+//   openingHours: hours,
+//   categories: tags,
+// } = restaurant;
+// console.log(restaurantName, hours, tags);
 
-// Default values
-const { menu = [], starterMenu: starters = [] } = restaurant;
-console.log(menu, starters);
+// // Default values
+// const { menu = [], starterMenu: starters = [] } = restaurant;
+// console.log(menu, starters);
 
-// Mutating Variables
-let a = 111;
-let b = 999;
-const obj = { a: 23, b: 7, c: 14 };
+// // Mutating Variables
+// let a = 111;
+// let b = 999;
+// const obj = { a: 23, b: 7, c: 14 };
 
-({ a, b } = obj);
-console.log(a, b);
+// ({ a, b } = obj);
+// console.log(a, b);
 
-// Nested objects
-const {
-  fri: { open: o, close: c },
-} = openingHours;
-console.log(o, c);
+// // Nested objects
+// const {
+//   fri: { open: o, close: c },
+// } = openingHours;
+// console.log(o, c);
+// END OF DESTRUCTURING ARRAYS
 
 // DESTRUCTURING ARRAYS //
 
