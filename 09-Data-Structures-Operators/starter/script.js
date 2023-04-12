@@ -52,37 +52,76 @@ const restaurant = {
   },
 };
 
-// SHORT CIRCUITING
-// OR OPERATOR = Great way to set default values
-// Returns the first truthy or last element
-// can use any data type, return any data type, short circuiting
-console.log('--------OR-----------');
-console.log(2 || 'Keiran');
-console.log('' || 'Keiran');
-console.log(true || 0);
-console.log(undefined || null);
+const restaurant1 = {
+  name: 'Capri',
+  // numGuests: 20,
+  numGuests: 0,
+};
+const restaurant2 = {
+  name: 'Borsa',
+  owner: 'Keiran Brown',
+};
 
-console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+// OR Assignment operator
+// restaurant1.numGuests = restaurant1.numGuests || 10;
+// restaurant2.numGuests = restaurant2.numGuests || 10;
 
-// restaurant.numGuests = 23;
-const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
-console.log(guests1);
+// restaurant1.numGuests ||= 10;
+// restaurant2.numGuests ||= 10;
 
-const guests2 = restaurant.numGuests || 10;
-console.log(guests2);
+// Nullish assignment operator (null or undefined)
+restaurant1.numGuests ??= 10;
+restaurant2.numGuests ??= 10;
 
-console.log('-----------AND------------');
-console.log(0 && 'Keiran');
-console.log(7 && 'Keiran');
-console.log('Hello' && 23 && null && 'Keiran');
+// restaurant1.owner = restaurant1.owner && '<ANONYMOUS>';
+// restaurant2.owner = restaurant2.owner && '<ANONYMOUS>';
 
-// Practical example
-if (restaurant.orderPizza) {
-  restaurant.orderPizza('mushrooms', 'pineapple');
-}
+restaurant1.owner &&= '< ANONYMOUS >';
+restaurant2.owner &&= '< ANONYMOUS >';
 
-restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
-// AND OPERATOR
+console.log(restaurant1);
+console.log(restaurant2);
+
+// NULLISH coalescing Operator
+// restaurant.numGuests = 0;
+// const guests = restaurant.numGuests || 10;
+// console.log(guests);
+
+// // Nullish: null and undefined (NOT 0 or '')
+// const guestCorrect = restaurant.numGuests ?? 10;
+// console.log(guestCorrect);
+
+// // SHORT CIRCUITING
+// // OR OPERATOR = Great way to set default values
+// // Returns the first truthy or last element
+// // can use any data type, return any data type, short circuiting
+// console.log('--------OR-----------');
+// console.log(2 || 'Keiran');
+// console.log('' || 'Keiran');
+// console.log(true || 0);
+// console.log(undefined || null);
+
+// console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+
+// // restaurant.numGuests = 23;
+// const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+// console.log(guests1);
+
+// const guests2 = restaurant.numGuests || 10;
+// console.log(guests2);
+
+// // AND OPERATOR
+// console.log('-----------AND------------');
+// console.log(0 && 'Keiran');
+// console.log(7 && 'Keiran');
+// console.log('Hello' && 23 && null && 'Keiran');
+
+// // Practical example
+// if (restaurant.orderPizza) {
+//   restaurant.orderPizza('mushrooms', 'pineapple');
+// }
+
+// restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
 
 // // REST PATTERN
 // // Destructuring
